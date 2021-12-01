@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple description
+Wants=network-online.target
+After=newtork.target network-online.target
+
+[Service]
+User=root
+Group=root
+ExecStart=sudo /usr/bin/python3 telegram_bot.py
+WorkingDirectory=/home/user
+
+[Install]
+WantedBy=multi-user.target
